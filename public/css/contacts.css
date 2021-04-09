@@ -1,0 +1,21 @@
+body
+{
+	background-color: #051827;
+}
+table 
+{
+	position: absolute;
+	top: 95px;
+	width: 80%;
+	font-size: 25px;
+}
+h1
+{
+	text-align: center;
+	color: white;
+}
+.heads 
+{
+	color: white;
+	text-align: center;
+}

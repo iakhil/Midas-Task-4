@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" type="text/css" href="css/secure.css">
+<style type="text/css">
+body 
+{
+	background-color: #1d1d42;
+}	
+h1
+{
+
+	color: white;
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+}
+p
+{
+	color: white;
+	text-align: center;
+	font-size: 45px;
+	font-family: 'Ubuntu', sans-serif;
+}
+.profilePic
+{
+	position: absolute;
+	top: 40px;
+	left: 90%;
+	height: 50px;
+}
+.logout
+{
+	position: absolute;
+	top: 122px;
+	right: 92px;
+	border-radius: 20%;
+	background-color: #79cf63;
+	width: 75px;
+	font-size: 20px;
+	height: 35px;
+}
+.logout:hover 
+{
+	color: black;
+}
+</style>
+  <head>
+  	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  	<p> You have successfully logged in. </p>
+ <h1 style="color: #14ffad;"> Welcome, <%= user %>! </h1> 
+ <img class="profilePic" src="<%= imgurl %>"> 
+<button class = "logout" onclick = "logout()">Logout</button>
+
+  </body>
+
+  <script type="text/javascript">
+  	function logout()
+  	{
+  	window.open("http://localhost:3000/logout");
+  	console.log("Logout clicked.")
+}
+  </script>
+</html>

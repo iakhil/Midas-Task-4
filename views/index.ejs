@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Midas</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Signika:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=RocknRoll+One&family=Signika:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=RocknRoll+One&family=Signika:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/styles2.css">
+</head>
+<body>
+<img src="images/logo.png" id = "logo">
+<div class = "title"> <h2>Midas IIITD </h2> </div>
+<i class="material-icons" id = "srch">search</i>
+<div class = "navbar">	
+<a href = "#Home" id = "hme"> Home </a>
+<div class="dropdown">
+<a href="#Pages"> Pages <i class="arrow down"> </i></a>
+<div class="dropdown-content">
+	
+<li> <a href="#Mission" style="font-size: 20px"> Mission </a> </li> 
+<li> <a href="#Publications" style="font-size:20px" > Publications </a> </li>
+<li> <a href="#Awards" style="font-size:20px"> Awards </a> </li>
+</div>
+</div> 
+<div class="dropdown">
+<a href="#Services"> Services <i class="arrow down"></i></a>
+<div class="dropdown-content">
+	<p style="color: #f5f5f5; font-family: 'Noto Sans JP', sans-serif;">Sentiment Analysis</p>
+	<p style="color: #f5f5f5; font-family: 'Noto Sans JP', sans-serif;">Chatbots</p>
+</div>
+</div>
+<a href="Blog"> Blog </a>
+<a href="http://localhost:3000/Contacts"> Contacts </a>
+</div>
+ <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+<span class="dot">
+	<div class = "web-app"> Web App Task 
+		<div style="font-size: 28px; color:#7cf57a;font-family: 'Signika', sans-serif;
+; position: absolute; top: 95px; left:45px;"> Smart solutions to improve your user engangement.</div>
+		<i class="fa fa-youtube-play" id = "ytbt" aria-hidden="true" style="position: absolute; top: 271px; left: 210px"></i>
+		<h5 onclick="yt()" style="position: absolute; top: 231px; left: 270px"> Go to YouTube </h5> 
+	<div class = "rectangle"> 
+	<h4 onclick = "login()" style="font-size:15px; color: #1d0226; position: absolute; top: -14px; left: 4px;"> Login|Register </h4>
+</div>
+	</div>
+
+</span>
+<div class="w3-content w3-display-container" style="max-width:800px"> 
+  <img class="mySlides" src="images/meeting.jpg" style="width:100%">
+  <img class="mySlides" src="images/meeting2.jpg" style="width:100%">
+  <img class="mySlides" src="images/meeting3.jpg" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"?>
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-red w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+<div class="citations">
+<h3> Citations </h3>
+<p style="position: absolute; top: 30px; right: -90px; color:#34ebcf; font-family: 'Acme', sans-serif;"  > Slides </p>
+<a href="https://previews.123rf.com/images/stockbroker/stockbroker1111/stockbroker111100804/11210941-colleagues-in-business-meeting.jpg" style="position: absolute; top: 145px; right: 50px; font-size: 25px; font-family: 'Acme', sans-serif;"> Image 1 </a>
+<a href="https://i.pinimg.com/originals/dc/6b/f6/dc6bf68c3f50b4cea9074dc5b9a1f22f.jpg" style="position: absolute; top: 175px; right: 50px; font-size: 25px; font-family: 'Acme', sans-serif;"> Image 2 </a>
+
+<a href="https://i.pinimg.com/originals/69/13/2d/69132d38859ce0c78a30c77e493e1dfa.jpg" style="position: absolute; top: 205px; right: 50px; font-size: 25px; font-family: 'Acme', sans-serif;"> Image 3 </a>
+<a href="https://ruder.io/" style="position: absolute; top: 260px; right: 65px; color:#34ebcf; font-family: 'Acme', sans-serif; font-size: 30px"  > Blog </a>
+<p style="position: absolute; top: 300px; right:-55px; color:white; font-family: 'Acme', sans-serif; font-size: 25px"> Author: Sebastian Ruder </p>
+</div>
+
+<script type="text/javascript">
+	function yt()
+	{
+		window.open("https://www.youtube.com/");	
+	}
+	function register()
+	{
+		window.open("http://localhost:3000/auth/google");
+	}
+
+	function login()
+	{
+		window.open("http://localhost:3000/auth/google")
+	}
+	function contacts()
+	{
+		window.open("http://localhost:3000/Contacts")
+	}
+	var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+
+</script>
+</body>
+</html>

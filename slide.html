@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/css/styles2.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" type="text/css" href="slide.css">
+</head>
+<body>
+<img src="images/logo.png" id = "logo">
+<div class = "title"> <h2>Midas IIITD </h2> </div>
+<i class="material-icons" id = "srch">search</i>
+<div class = "navbar">	
+<a href = "#Home" id = "hme"> Home </a>
+<a href="#Pages"> Pages </a>
+<a href="#Services"> Services </a>
+<a href="Blog"> Blog </a>
+<a href="#Contacts"> Contacts </a>
+</div>
+ <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+<span class="dot">
+	<div class = "web-app"> Web App Task 
+		<i class="fa fa-youtube-play" id = "ytbt" aria-hidden="true"></i>
+		<h5 onclick="yt()"> Go to YouTube </h5>
+	<div class = "rectangle"> </div>
+	<h4 onclick = "register()"> Register </h4>
+	<h4 onclick = "login()"> Login </h4>
+	</div>
+
+</span>
+
+<div class="w3-content w3-display-container" style="max-width:800px"> 
+  <img class="mySlides" src="meeting.jpg" style="width:100%; border-radius: 40%;">
+  <img class="mySlides" src="meeting2.jpg" style="width:100%">
+  <img class="mySlides" src="meeting3.jpg" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"?>
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-red w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+
+
+
+
+<!-- 
+<img src="images/meeting.jpg" class = "meeting"> -->
+
+<script type="text/javascript">
+	function yt()
+	{
+		window.open("https://www.youtube.com/");	
+	}
+	function register()
+	{
+		window.open("http://localhost:3000/auth/google");
+	}
+
+	function login()
+	{
+		window.open("http://localhost:3000/auth/google")
+	}
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+</body>
+</html>
